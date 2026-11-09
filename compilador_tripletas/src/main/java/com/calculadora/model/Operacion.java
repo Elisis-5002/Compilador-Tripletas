@@ -1,4 +1,4 @@
-package compilador_tripletas.src.main.java.com.calculadora.model;
+package com.calculadora.model;
 
 /**
  * Describe una operación del menú y cómo invocarla en el ejecutable nativo.

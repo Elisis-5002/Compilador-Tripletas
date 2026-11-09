@@ -9,19 +9,40 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>Calculadora con tokens, sentencias y tripletas</name>
+    <description>
+        Aplicación Swing que invoca un motor nativo en C mediante Runtime y
+        muestra tokens, sentencias, tripletas, pasos y resultados en un grid.
+    </description>
 
     <properties>
+        <!--
+            Se usa Java 17 para que el proyecto compile con el JDK instalado en
+            el equipo. NetBeans 21 funciona con JDK 17 o superior. Si se desea
+            compilar con JDK 21, basta con cambiar este valor a 21.
+        -->
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <exec.mainClass>com.calculadora.Main</exec.mainClass>
     </properties>
 
     <build>
+        <finalName>CalculadoraTripletas</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.4.1</version>
                 <configuration>
                     <archive>
                         <manifest>
