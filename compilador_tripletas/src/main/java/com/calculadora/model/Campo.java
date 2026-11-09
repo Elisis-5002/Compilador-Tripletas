@@ -1,4 +1,4 @@
-package compilador_tripletas.src.main.java.com.calculadora.model;
+package com.calculadora.model;
 
 /**
  * Un dato de entrada que el usuario debe escribir para una operación.
